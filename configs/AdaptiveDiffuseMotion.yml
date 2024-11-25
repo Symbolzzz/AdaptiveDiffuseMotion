@@ -1,0 +1,64 @@
+# 数据配置
+h5file: "process/BEAT_v0_train.h5"  # h5 文件路径, 可选: "../process/speaker_2_10_v0.h5"
+n_poses: 150                       # 运动帧数量
+motion_resampling_framerate: 30    # 运动重采样帧率（例如: 20 -> 60）
+motion_dim: 684                    # 运动维度 (可选: 684/1141)
+njoints: 2052                      # 关节数量（运动维度 x 3）
+nexpressions: 153                  # 面部表情维度
+latent_dim: 384                    # 潜在空间维度 (可选: 256 -> 512, 384)
+n_seed: 30                         # 种子数量
+cond_mask_prob: 0.1                # 条件掩码概率
+style_dim: 4                       # 风格维度
+audio_feature_dim: 1434            # 音频特征维度（1133 + 301, 包括音频和文本特征）
+audio_feat_dim_latent: 96          # 音频特征潜在维度 (可选: 64 -> 128, 96)
+facial_dim: 51                     # 面部表情维度
+nfeats: 1                          # 特征数量
+
+# 训练参数
+num_workers: 4                     # 数据加载器线程数量
+batch_size: 200                    # 批次大小
+log_interval: 50                   # 日志间隔
+weight_decay: 0.0                  # 权重衰减
+lr_anneal_steps: 0                 # 学习率退火步数
+max_num_steps: 180000              # 最大训练步数
+save_iters: 180000                 # 模型保存间隔
+
+# 模型参数
+name: "AdaptiveDiffuseMotion"      # 模型名称
+version: "v0"                      # 模型版本
+suffix: ""                         # 文件后缀
+
+# 优化器参数
+lr: 0.0001                         # 初始学习率
+betas: [0.5, 0.999]                # Adam 优化器的 beta 参数
+milestones: [100, 200]             # 学习率调整节点
+gamma: 0.1                         # 学习率衰减系数
+
+# 检查点
+resume_checkpoint:                 # 训练恢复的检查点路径
+
+# 多任务训练设置
+train_gesture: False               # 是否训练手势
+using_multi_task_training: True    # 是否启用多任务训练
+
+# 预训练模型设置
+model_name: "Multi"                # 模型类型
+eval_model: motion_autoencoder     # 评估模型名称
+e_name: HalfEmbeddingNet           # 嵌入网络名称
+e_path: ""  # 预训练自动编码器模型路径
+model_path: ""  # 预训练多任务模型路径
+
+# 测试设置
+body: "whole"                      # 测试的身体部位
+tst_path: ""  # 测试数据路径
+
+# 输出设置
+out_root_path: /outputs/           # 输出根路径
+root_path: "."                     # 项目根路径
+save_dir: "./outputs"              # 保存文件夹路径
+
+# 模型超参数
+vae_length: 300                    # VAE 序列长度
+randm_num: 500                     # 随机数种子
+rec_weight: 500                    # 重建损失权重
+grad_norm: 0                       # 梯度范数约束
