@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaptiveDiffuseMotion - Adaptive Multi-Task Diffusion Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">AdaptiveDiffuseMotion</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#abstract">Abstract</a>
+                <a href="#pipeline">Pipeline</a>
+                <a href="#results">Results</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>AdaptiveDiffuseMotion</h1>
+            <p class="subtitle">Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation</p>
+            <div class="authors">
+                <span class="author">Enyun Xuan</span>
+                <span class="author">You Li</span>
+                <span class="author">Ziwei Li</span>
+                <span class="author">Mengmeng Yao</span>
+                <span class="author">Renzhong Guo</span>
+            </div>
+            <div class="affiliations">
+                <span class="affiliation">Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ), Shenzhen, China</span><br>
+                <span class="affiliation">Shenzhen University, Shenzhen, China</span>
+            </div>
+            <div class="buttons">
+                <a href="https://github.com/Symbolzzz/AdaptiveDiffuseMotion" class="btn btn-primary" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="#" class="btn btn-secondary">Paper</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="abstract" class="section">
+        <div class="container">
+            <h2>Abstract</h2>
+            <div class="content">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <img src="assets/main_page-0001.jpg" alt="AdaptiveDiffuseMotion Overview" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <p>
+                    Speech-driven holistic motion generation requires synchronized facial expressions and diverse gestures for lifelike virtual agents. Existing methods struggle to correctly model the complex relationships between gestures and facial expressions, often relying on fixed weighting schemes or predefined inter-task constraints that fail to capture their optimal interactions.
+                </p>
+                <p>
+                    We introduce <strong>AdaptiveDiffuseMotion</strong>, a novel diffusion-based framework that adaptively balances deterministic facial expression synthesis and non-deterministic gesture generation through uncertainty-based multi-task learning. Our approach dynamically adjusts loss weights without manual tuning, achieving superior synchronization and diversity simultaneously.
+                </p>
+                <p>
+                    Experimental results demonstrate significant improvements in facial precision, gesture diversity, and overall realism across multiple metrics and user studies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pipeline" class="section bg-light">
+        <div class="container">
+            <h2>Pipeline</h2>
+            <div class="content">
+                <div class="method-overview">
+                    <div style="text-align: center; margin: 2rem 0;">
+                        <img src="assets/pipeline_page-0001.jpg" alt="AdaptiveDiffuseMotion Pipeline" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="margin-top: 2rem;">
+                        Our framework encodes audio features and speaker ID as diffusion conditions. Cross-attention and self-attention layers decode and fuse features to capture temporal relationships. An uncertainty-based module dynamically adjusts loss weights for gesture and expression tasks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="section">
+        <div class="container">
+            <h2>Results</h2>
+            <div class="content">
+                <h3>Performance Highlights</h3>
+                <ul>
+                    <li><strong>Gesture Diversity:</strong> Achieves highest diversity score (52.4) and semantic relevance (SRGR: 0.322)</li>
+                    <li><strong>Facial Accuracy:</strong> Lowest FD score (9.30) for precise facial synchronization</li>
+                    <li><strong>User Preference:</strong> Consistently preferred across all evaluation criteria in user studies</li>
+                </ul>
+
+                <h3>Visual Comparisons</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="placeholder-video">
+                            <p>Gesture Diversity</p>
+                        </div>
+                        <p class="caption">More diverse and natural gestures</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="placeholder-video">
+                            <p>Facial Expression</p>
+                        </div>
+                        <p class="caption">Accurate lip-sync and expressions</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="placeholder-video">
+                            <p>Full-body Motion</p>
+                        </div>
+                        <p class="caption">Synchronized holistic motion</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2.5rem; text-align: center;">
+                    <a href="https://github.com/Symbolzzz/AdaptiveDiffuseMotion" class="btn btn-primary" target="_blank">
+                        View Code & More Details on GitHub
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AdaptiveDiffuseMotion. Guangdong Laboratory of AI and Digital Economy (SZ) & Shenzhen University.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

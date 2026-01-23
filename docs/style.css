@@ -1,0 +1,329 @@
+/* 全局样式 */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #666666;
+    --text-color: #333333;
+    --bg-color: #fafafa;
+    --card-bg: #ffffff;
+    --border-color: #eeeeee;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    background: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 20px;
+}
+
+.nav-brand {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* 英雄区域 */
+.hero {
+    padding: 140px 20px 100px;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.authors {
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.author {
+    margin: 0 0.5rem;
+}
+
+.affiliations {
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    border: 1px solid var(--border-color);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background: #333333;
+    border-color: #333333;
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background: var(--card-bg);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-color);
+    box-shadow: var(--shadow-hover);
+}
+
+/* 章节 */
+.section {
+    padding: 80px 20px;
+    background: var(--bg-color);
+}
+
+.section.bg-light {
+    background: var(--bg-color);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.section h3 {
+    font-size: 1.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.content ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.content li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+/* 占位符 */
+.placeholder-image,
+.placeholder-video {
+    background: var(--bg-color);
+    border-radius: 8px;
+    padding: 80px 20px;
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--secondary-color);
+    border: 1px dashed var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* 方法概览 */
+.method-overview {
+    margin-top: 1rem;
+}
+
+/* 结果网格 */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.result-item {
+    text-align: center;
+    background: var(--bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.result-item:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.caption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* 代码块 */
+pre {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+code {
+    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* 页脚 */
+.footer {
+    background: var(--card-bg);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2.5rem 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .content {
+        padding: 2rem 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.6s ease-out;
+}
