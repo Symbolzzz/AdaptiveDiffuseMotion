@@ -75,7 +75,7 @@ body {
 
 /* 英雄区域 */
 .hero {
-    padding: 140px 20px 100px;
+    padding: 140px 20px 60px;
     text-align: center;
     background: var(--bg-color);
 }
@@ -155,7 +155,7 @@ body {
 
 /* 章节 */
 .section {
-    padding: 80px 20px;
+    padding: 50px 20px;
     background: var(--bg-color);
 }
 
@@ -165,7 +165,7 @@ body {
 
 .section h2 {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
     color: var(--primary-color);
     font-weight: 600;
@@ -184,7 +184,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background: var(--card-bg);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
 }
