@@ -1,5 +1,9 @@
 # AdaptiveDiffuseMotion
 
+**[Project Page](https://symbolzzz.github.io/AdaptiveDiffuseMotion/)** | **[Paper](#)** | **[Code](https://github.com/Symbolzzz/AdaptiveDiffuseMotion)**
+
+Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation
+
 ## Getting Started
 
 First, update the `prefix` section in `environment.yaml` to match your directory path, then set up the environment by running:
