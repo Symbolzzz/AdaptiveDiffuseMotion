@@ -7,41 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">AdaptiveDiffuseMotion</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#abstract">Abstract</a>
-                <a href="#pipeline">Pipeline</a>
-                <a href="#results">Results</a>
-            </div>
-        </div>
-    </nav>
-
     <header id="home" class="hero">
         <div class="container">
-            <h1>AdaptiveDiffuseMotion</h1>
-            <p class="subtitle">Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation</p>
+            <h1>AdaptiveDiffuseMotion: Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation</h1>
+            <p class="conference-badge">ICASSP 2026</p>
             <div class="authors">
-                <span class="author">Enyun Xuan</span>
-                <span class="author">You Li</span>
-                <span class="author">Ziwei Li</span>
-                <span class="author">Mengmeng Yao</span>
-                <span class="author">Renzhong Guo</span>
+                <span class="author">Enyun Xuan<sup>1,2</sup></span>
+                <span class="author">You Li<sup>1,2</sup></span>
+                <span class="author">Ziwei Li<sup>1,2</sup></span>
+                <span class="author">Mengmeng Yao<sup>1</sup></span>
+                <span class="author">Renzhong Guo<sup>1,2</sup></span>
             </div>
             <div class="affiliations">
-                <span class="affiliation">Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ), Shenzhen, China</span><br>
-                <span class="affiliation">Shenzhen University, Shenzhen, China</span>
+                <span class="affiliation"><sup>1</sup> Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ), Shenzhen, China</span><br>
+                <span class="affiliation"><sup>2</sup> Shenzhen University, Shenzhen, China</span>
             </div>
-            <div class="buttons">
-                <a href="https://github.com/Symbolzzz/AdaptiveDiffuseMotion" class="btn btn-primary" target="_blank">
-                    <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="#" class="btn btn-secondary">Paper</a>
+            <div class="links">
+                <a href="https://github.com/Symbolzzz/AdaptiveDiffuseMotion" target="_blank">Code</a>
+                <span class="separator">|</span>
+                <a href="#">Paper</a>
             </div>
         </div>
     </header>
@@ -86,32 +70,122 @@
         <div class="container">
             <h2>Results</h2>
             <div class="content">
-                <h3>Performance Highlights</h3>
-                <ul>
-                    <li><strong>Gesture Diversity:</strong> Achieves highest diversity score (52.4) and semantic relevance (SRGR: 0.322)</li>
-                    <li><strong>Facial Accuracy:</strong> Lowest FD score (9.30) for precise facial synchronization</li>
-                    <li><strong>User Preference:</strong> Consistently preferred across all evaluation criteria in user studies</li>
-                </ul>
+                <p>Our method generates <strong>more diverse gestures</strong> while maintaining <strong>more accurate facial expressions</strong> compared to existing approaches. The following video comparisons demonstrate these improvements across different speakers.</p>
 
                 <h3>Visual Comparisons</h3>
-                <div class="results-grid">
-                    <div class="result-item">
-                        <div class="placeholder-video">
-                            <p>Gesture Diversity</p>
-                        </div>
-                        <p class="caption">More diverse and natural gestures</p>
+                
+                <!-- Speaker 1: Scott - Expression -->
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Speaker 1: Scott - Facial Expression</h4>
+                <div class="video-comparison">
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/expr_source/GT_2_scott_0_103_103_expr_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ground Truth</p>
                     </div>
-                    <div class="result-item">
-                        <div class="placeholder-video">
-                            <p>Facial Expression</p>
-                        </div>
-                        <p class="caption">Accurate lip-sync and expressions</p>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/expr_source/ours_2_scott_0_103_103_expr_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ours</p>
                     </div>
-                    <div class="result-item">
-                        <div class="placeholder-video">
-                            <p>Full-body Motion</p>
-                        </div>
-                        <p class="caption">Synchronized holistic motion</p>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/expr_source/diffshge_2_scott_0_103_103_expr_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">DiffSHEG</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 1: Scott - Full-body -->
+                <h4 style="margin-top: 2.5rem; margin-bottom: 1rem;">Speaker 1: Scott - Full-body Motion</h4>
+                <div class="video-comparison">
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/GT_2_scott_0_103_103_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ground Truth</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/ours_2_scott_0_103_103_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/diffshge_2_scott_0_103_103_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">DiffSHEG</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 2: Lawrence - Expression -->
+                <h4 style="margin-top: 2.5rem; margin-bottom: 1rem;">Speaker 2: Lawrence - Facial Expression</h4>
+                <div class="video-comparison">
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/expr_source/GT_4_lawrence_0_2_2_expr_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ground Truth</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/expr_source/ours_4_lawrence_0_2_2_expr_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/expr_source/diffshge_4_lawrence_0_2_2_expr_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">DiffSHEG</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 2: Lawrence - Full-body -->
+                <h4 style="margin-top: 2.5rem; margin-bottom: 1rem;">Speaker 2: Lawrence - Full-body Motion</h4>
+                <div class="video-comparison">
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/GT_4_lawrence_0_2_2_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ground Truth</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/ours_4_lawrence_0_2_2_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/diffshge_4_lawrence_0_2_2_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">DiffSHEG</p>
+                    </div>
+                </div>
+
+                <!-- Additional: Carla (Female) -->
+                <h4 style="margin-top: 2.5rem; margin-bottom: 1rem;">Additional Sample: Carla</h4>
+                <div class="video-comparison">
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/GT_6_carla_0_103_103_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ground Truth</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/ours_6_carla_0_103_103_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">Ours</p>
+                    </div>
+                    <div class="video-item">
+                        <video controls>
+                            <source src="assets/whole_source/diffshge_6_carla_0_103_103_part1.mp4" type="video/mp4">
+                        </video>
+                        <p class="caption">DiffSHEG</p>
                     </div>
                 </div>
 
@@ -126,10 +200,39 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 AdaptiveDiffuseMotion. Guangdong Laboratory of AI and Digital Economy (SZ) & Shenzhen University.</p>
+            <div class="acknowledgments">
+                <h4>Acknowledgments</h4>
+                <p>We thank the authors of the following works for their open-source contributions:
+                    <a href="https://github.com/PantoMatrix/PantoMatrix" target="_blank">CaMN</a>,
+                    <a href="https://github.com/JeremyCJM/DiffSHEG" target="_blank">DiffSHEG</a>,
+                    <a href="https://github.com/YoungSeng/DiffuseStyleGesture" target="_blank">DSG</a>
+                </p>
+            </div>
+            <div class="citation">
+                <h4>Citation</h4>
+                <div class="citation-box">
+                    <pre><code id="citation-text">@inproceedings{xuan2026adaptivediffusemotion,
+  title={AdaptiveDiffuseMotion: Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation},
+  author={Xuan, Enyun and Li, You and Li, Ziwei and Yao, Mengmeng and Guo, Renzhong},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2026}
+}</code></pre>
+                    <button class="copy-btn" onclick="copyCitation()">Copy</button>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 AdaptiveDiffuseMotion. Guangdong Laboratory of AI and Digital Economy (SZ) & Shenzhen University.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function copyCitation() {
+            const text = document.getElementById('citation-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 2000);
+            });
+        }
+    </script>
 </body>
 </html>
