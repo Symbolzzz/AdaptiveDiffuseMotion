@@ -55,6 +55,19 @@ python calculate_gesture_statistics.py --dataset BEAT --version "v0"
 ```bash
 python train.py --config=./configs/AdaptiveDiffuseMotion.yml
 ```
+## Cite
+
+```
+@INPROCEEDINGS{11463428,
+  author={Xuan, Enyun and Li, You and Li, Ziwei and Yao, Mengmeng and Guo, Renzhong},
+  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={AdaptiveDiffuseMotion: Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation}, 
+  year={2026},
+  pages={20057-20061},
+  keywords={Motion pictures;MIMICs;Millimeter wave integrated circuits;Monolithic integrated circuits;Protocols;HTTP;Internet;Diversity methods;LoRa;Videos;co-speech motion generation;speech-to-gesture generation;vector quantization;diffusion model},
+  doi={10.1109/ICASSP55912.2026.11463428}}
+```
+
 ## Reference
 
 Our work is based on [DiffuseStyleGesture](https://github.com/YoungSeng/DiffuseStyleGesture), [BEAT](https://github.com/PantoMatrix/PantoMatrix)
