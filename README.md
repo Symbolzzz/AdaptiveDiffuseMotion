@@ -1,6 +1,6 @@
 # AdaptiveDiffuseMotion
 
-**[Project Page](https://symbolzzz.github.io/AdaptiveDiffuseMotion/)** | **[Paper](#)** | **[Code](https://github.com/Symbolzzz/AdaptiveDiffuseMotion)**
+**[Project Page](https://symbolzzz.github.io/AdaptiveDiffuseMotion/)** | **[Paper](https://ieeexplore.ieee.org/document/11463428)** | **[Code](https://github.com/Symbolzzz/AdaptiveDiffuseMotion)**
 
 Adaptive Multi-Task Diffusion Model for Speech-Driven Holistic Motion Generation
 
